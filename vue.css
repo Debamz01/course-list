@@ -1,0 +1,73 @@
+.input-container {
+     text-align: center;
+   margin: 20px 0;
+   text-align: center;
+   }
+   .input-container input, .input-container select, .input-container button {
+     padding: 10px;
+     margin: 5px;
+     font-size: 16px;
+   }
+
+   .input-container [type="text"] {
+     text-align: center;
+     height: 60px;
+     top: 10px;
+     border: none;
+     background: transparent;
+     font-size: 20px;
+     font-weight: 200;
+     width: 313px;
+   }
+
+
+
+.donecourses {
+float: left;
+width: 48%;
+height: 382px ;
+
+}
+
+.undonecourses {
+float: right;
+  width: 48%;
+  height: 382px;
+
+}
+
+.countsection {
+  text-align: center;
+     margin-top: 20px;
+     font-size: 18px;
+     font-weight: bold;
+     margin-top: 100px;
+     color: white;
+     color: rgba(0, 0, 0, 0.5);
+
+}
+
+.undonecourses-head {
+  margin-left: 65%;
+}
+
+.undonecourses-body {
+  margin-left: 70%;
+}
+
+body {
+  background-color: #A683E3;
+
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
