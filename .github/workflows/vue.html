@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List of courses</title>
+  <link rel="stylesheet" href="vue.css">
+    <script src="https://unpkg.com/vue@3" charset="utf-8"></script>
+  </head>
+  <body>
+<div id="app">
+  <!-- Add new course session -->
+
+
+    <div class="input-container">
+      <h2 >Add a course</h2>
+      <input v-model="newCourse" placeholder="Enter course title" />
+      <select v-model="myInput">
+        <option value="done">Done</option>
+        <option value="undone">Undone</option>
+      </select>
+      <button @click="addCourse">Add</button>
+    </div>
+<div class="courses">
+
+</div>
+  <div class="donecourses">
+      <table>
+        <thead>
+
+          <h1>{{ donecourses[0].Head }}</h1>
+        </thead>
+        <tbody>
+          <tr v-for="(course, index) in donecourses.slice(1)" :key="index">
+            <td>
+              <h3>{{ course.courses }}  <button @click="switchPosition(course, true)">{{ course.donebutton }}</button> </h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="undonecourses">
+      <table class = "undonecourses-body">
+        <thead>
+          <h1 class="undonecourses-head">{{ undonecourses[0].Head }}</h1>
+        </thead>
+        <tbody>
+          <tr v-for="(course, index) in undonecourses.slice(1)" :key="index">
+            <td>
+              <h3>{{ course.courses }}     <button @click="switchPosition(course, false)">{{ course.undobutton }}</button>
+              </h3>
+            </td>
+          </tr>
+        </tbody>
+
+</table>
+</div>
+
+
+    <!-- Display the amount of done courses -->
+  <div class="countsection">
+   <p>{{ doneCount }}/{{ totalCourses }} courses done.</p>
+ </div>
+
+  </div>
+
+<script src="vue.js">
+
+</script>
+  </body>
+</html>
